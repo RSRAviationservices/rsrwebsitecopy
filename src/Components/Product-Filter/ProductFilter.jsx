@@ -42,7 +42,7 @@ const ProductFilter = () => {
           value={companyFilter}
           onChange={(e) => setCompanyFilter(e.target.value)}
         >
-          <option value="">Select Company</option>
+          <option value="">Shop By Company</option>
           {companies.map((company, index) => (
             <option key={index} value={company}>{company}</option>
           ))}
@@ -52,7 +52,7 @@ const ProductFilter = () => {
           value={productFilter}
           onChange={(e) => setProductFilter(e.target.value)}
         >
-          <option value="">Select Product</option>
+          <option value="">Shop by Category</option>
           {productCategories.map((category, index) => (
             <option key={index} value={category}>{category}</option>
           ))}
