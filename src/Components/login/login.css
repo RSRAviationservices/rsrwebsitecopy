@@ -1,0 +1,92 @@
+.login-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+  }
+
+  .form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .tab.active {
+    color: rgb(215,31,37);
+    border-bottom: 2px solid rgb(215,31,37);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(215,31,37);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(215,31,37);;
+  }
+  
+  .terms {
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+  }

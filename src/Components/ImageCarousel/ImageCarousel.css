@@ -1,0 +1,47 @@
+.image-carousel {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40vw; /* Adjust the height as needed */
+  overflow: hidden; /* Ensure any overflow is hidden */
+}
+
+.carousel-image {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the entire image fits inside the container */
+}
+
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  color:rgb(215,31,37);
+  padding: 10px 15px;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+
+.carousel-button:hover {
+  background-color: rgb(175, 31, 37); /* Change background color on hover */
+  color: #f9f9f9;
+  opacity: 1;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}

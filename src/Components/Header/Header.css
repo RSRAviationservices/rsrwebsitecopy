@@ -1,0 +1,178 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap; /* Prevent content from wrapping */
+  overflow-x: auto; /* Enable horizontal scroll if content overflows */
+}
+
+.logo img {
+  height: 50px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Prevent the content inside header-right from wrapping */
+}
+
+.search-bar {
+  position: relative;
+  margin-right: 20px;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.search-bar .search-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: rgb(215,31,37);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-bar .search-button .icon {
+  font-size: 18px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.header-buttons button {
+  background-color: transparent;
+  border: none;
+  color: rgb(215,31,37);
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.header-buttons button .icon {
+  font-size: 20px;
+}
+
+/* Responsive adjustments for larger screens */
+@media (max-width: 1200px) {
+  .search-bar {
+    max-width: 350px;
+  }
+
+  .search-bar input {
+    padding: 8px;
+  }
+
+  .header-buttons button {
+    font-size: 17px;
+    padding: 9px;
+  }
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 992px) {
+  .search-bar {
+    max-width: 300px;
+  }
+
+  .search-bar input {
+    padding: 8px;
+  }
+
+  .header-buttons button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+/* Responsive adjustments for smaller tablets and large phones */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .search-bar {
+    max-width: 250px;
+  }
+
+  .header-buttons button {
+    font-size: 15px;
+    padding: 7px;
+  }
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 576px) {
+  .header {
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .header-right {
+    width: auto;
+    justify-content: space-between;
+  }
+
+  .header-buttons {
+    margin-left: 10px;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .header-buttons button {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+  .logo img {
+    height: 35px;
+  }
+
+  .search-bar {
+    max-width: 200px;
+  }
+
+  .header-buttons button {
+    font-size: 13px;
+    padding: 5px;
+  }
+}

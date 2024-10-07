@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Container for the cards */
+.card-container {
+  display: flex;               /* Use Flexbox to align items in a row */
+  justify-content: space-between; /* Space evenly between the cards */
+  flex-wrap: wrap;             /* Allow wrapping on smaller screens */
+  padding: 20px;
+  max-width: 1200px;           /* Set a max width for the container */
+  margin: 0 auto;              /* Center the container */
+}
+
+/* Individual card styling */
+.card {
+  background-color: #f9f9f9;   /* Light background */
+  border: 1px solid rgb(215,31,37);      /* Light border */
+  border-radius: 8px;          /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  width: 30%;                  /* Each card takes up 30% of the container width */
+  margin-bottom: 20px;         /* Add space at the bottom */
+  box-sizing: border-box;      /* Include padding in width calculation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease; /* Animation on hover */
+}
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: scale(1.2); /* Slightly zoom in on hover */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Styling for section titles */
+h2 {
+  color: rgb(215,31,37);
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Paragraph styling */
+p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Strong text styling */
+strong {
+  color: rgb(215,31,37);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;    /* Stack the cards vertically on smaller screens */
+  }
+
+  .card {
+    width: 100%;               /* Each card takes up full width on small screens */
+  }
+}
+
+
+/* //rgb(215,31,37) */

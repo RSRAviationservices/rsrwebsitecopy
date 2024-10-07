@@ -1,0 +1,152 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark shade */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px; /* Adjusted width for a smaller form */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto; /* Add scroll if content overflows */
+    height: auto; /* Auto height based on content */
+    max-height: 90vh; /* Ensure modal does not exceed viewport height */
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute; /* Position relative to the modal-content */
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(215,31,37);
+    z-index: 1001; /* Ensure it's above the modal content */
+  }
+  
+  .close-btn:hover {
+    color: rgb(175,31,37);
+  }
+  
+  /* Form Styles */
+  .form-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Flex container for side-by-side layout */
+  .form-group.row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+  }
+  
+  /* Each form item in row should have equal width */
+  .form-group.row .form-item {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  /* Ensure consistent styling for form items */
+  .form-item {
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 10px; /* Added margin to separate from other fields */
+  }
+  
+  .Submit {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(215,31,37);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Margin to separate from message field */
+  }
+  
+  .Submit:hover {
+    background-color: rgb(175,31,37);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .modal-content {
+      max-width: 90%;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 95%;
+      padding: 10px;
+    }
+  
+    .Submit {
+      font-size: 16px;
+    }
+  
+    input, select, textarea {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-content {
+      max-width: 100%;
+      padding: 5px;
+    }
+  
+    .Submit {
+      font-size: 14px;
+    }
+  
+    input, select, textarea {
+      font-size: 12px;
+    }
+  }
+  

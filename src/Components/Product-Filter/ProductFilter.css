@@ -1,0 +1,68 @@
+/* ProductFilter.css */
+
+.product-filter {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+  }
+  
+  .filter-button {
+    padding: 10px 20px;
+    background-color: rgb(215,31,37);;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .filter-button:hover {
+    background-color:  rgb(152, 33, 37);;
+  }
+  
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .product-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-company {
+    color: #666;
+  }
+  
+  .product-category {
+    color: #999;
+    font-style: italic;
+  }

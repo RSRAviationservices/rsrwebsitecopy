@@ -1,0 +1,36 @@
+/* Container for the marquee */
+.marquee-container {
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Styling for each marquee item */
+  .marquee-item {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  
+  /* Styling for the button */
+  .marquee-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  /* Styling for each image */
+  .marquee-image {
+    width: calc(20% - 20px); /* Adjust size to show 5 images at a time */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the images */
+  .marquee-image:hover {
+    transform: scale(2.0); /* Slightly zoom in on hover */
+    z-index: 1;
+    overflow: hidden;
+  }
+  
