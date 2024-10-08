@@ -1,62 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* General styling */
-.team-page {
-  background-color: #f3f4f6;
-  min-height: 100vh;
+.team-section {
+  background-color: white;
   padding: 2rem;
-  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-.page-title {
+.team-title {
   font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: rgb(215, 31, 37);
 }
 
-/* Department Section */
-.department {
-  margin-bottom: 3rem;
+/* Team Grid Layout */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Add space between cards */
+  flex-wrap: wrap;
 }
 
-.department-title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: rgb(215, 31, 37);
-  text-align: center;
-}
-
-/* Member Grid */
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Member Card */
-.member-card {
+/* Team Card */
+.team-card {
   perspective: 1000px;
-  cursor: pointer;
   width: 250px;
   height: 300px;
+  cursor: pointer;
+  position: relative;
 }
 
-.member-card-inner {
+.team-card-inner {
   width: 100%;
   height: 100%;
-  position: relative;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  position: relative;
 }
 
-.member-card.flipped .member-card-inner {
+.team-card.flipped .team-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Front and Back Faces */
-.member-card-front,
-.member-card-back {
+.team-card-front, 
+.team-card-back {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -65,68 +57,52 @@
   left: 0;
 }
 
-.member-card-front {
+/* Front Side */
+.team-card-front {
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
+ 
 }
 
-.member-card-back {
-  background-color:  rgb(215, 31, 37);
-  transform: rotateY(180deg);
+.team-card-front img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-card-front h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.team-card-front p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Back Side */
+.team-card-back {
+  background-color: rgb(215, 31, 37);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
   color: white;
+  transform: rotateY(180deg);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.member-photo img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-}
-
-.member-info {
-  text-align: center;
-}
-
-.member-name {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: rgb(215, 31, 37);
-}
-
-.member-department {
+.team-card-back p {
   font-size: 1rem;
-  color: rgb(215, 31, 37);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .member-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .member-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .member-card {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-  }
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
 }

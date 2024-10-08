@@ -1,3 +1,4 @@
+/* Basic styling for the header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,10 +12,12 @@
   overflow-x: auto; /* Enable horizontal scroll if content overflows */
 }
 
+/* Logo styling */
 .logo img {
   height: 50px;
 }
 
+/* Styling for the right-side section (search bar and buttons) */
 .header-right {
   display: flex;
   align-items: center;
@@ -22,6 +25,7 @@
   white-space: nowrap; /* Prevent the content inside header-right from wrapping */
 }
 
+/* Search bar styling */
 .search-bar {
   position: relative;
   margin-right: 20px;
@@ -43,7 +47,7 @@
   right: 10px;
   transform: translateY(-50%);
   background-color: transparent;
-  color: rgb(215,31,37);
+  color: rgb(215, 31, 37);
   border: none;
   border-radius: 50%;
   padding: 10px;
@@ -54,6 +58,7 @@
   font-size: 18px;
 }
 
+/* Styling for the buttons in the header (like Cart and User) */
 .header-buttons {
   display: flex;
   align-items: center;
@@ -63,11 +68,13 @@
 .header-buttons button {
   background-color: transparent;
   border: none;
-  color: rgb(215,31,37);
+  color: rgb(215, 31, 37);
   margin-right: 15px;
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
+  min-width: 44px;
+  min-height: 44px; /* Ensure proper hit area for touch devices */
 }
 
 .header-buttons button .icon {
@@ -169,10 +176,27 @@
 
   .search-bar {
     max-width: 200px;
+    display: block; /* Ensure the search bar is visible */
   }
 
   .header-buttons button {
     font-size: 13px;
     padding: 5px;
+  }
+}
+
+/* Extra adjustments for screens smaller than 400px */
+@media (max-width: 400px) {
+  .logo img {
+    height: 30px;
+  }
+
+  .header-buttons button {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .search-bar {
+    max-width: 180px; /* Reduce search bar size further on smaller screens */
   }
 }

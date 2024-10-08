@@ -1,32 +1,30 @@
-// src/Components/NavBar.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaHome, FaUsers, FaBoxOpen, FaHandshake } from 'react-icons/fa'; // Importing Font Awesome icons
-import './NavBar.css'; // Import CSS for styling
+import { FaHome, FaUsers, FaBoxOpen, FaHandshake } from 'react-icons/fa';
+import './NavBar.css';
 
 const NavBar = () => {
   return (
     <nav className="nav-bar">
       <ul className="nav-list">
         <li className="nav-item">
-          <Link to="/" className="nav-link kodchasan-regular">
+          <a href="#home" className="nav-link">
             <FaHome className="nav-icon" /> Home
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link to="/team" className="nav-link kodchasan-regular">
+          <a href="#team" className="nav-link">
             <FaUsers className="nav-icon" /> Our Team
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link to="/products" className="nav-link kodchasan-regular">
+          <a href="#products" className="nav-link">
             <FaBoxOpen className="nav-icon" /> Products
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link to="/partners" className="nav-link kodchasan-regular">
+          <a href="#partners" className="nav-link">
             <FaHandshake className="nav-icon" /> Our Partners
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

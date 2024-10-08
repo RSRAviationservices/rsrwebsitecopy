@@ -6,6 +6,10 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import presentationVideo from '../../Resource/videos/About.mp4';
 import Form from '../Form/Form';
 import AboutUs from'../AboutUs/AboutUs';
+import img2 from '../../Resource/oems/2.jpg';
+import img71 from '../../Resource/oems/71.jpg';
+import img73 from '../../Resource/oems/73.jpg';
+import img84 from '../../Resource/oems/84.jpg';
 
 
 const Home = () => {
@@ -29,6 +33,13 @@ const Home = () => {
       </div>
 
       <div className="who-we-are kodchasan-regular">
+        <h2>Official Distributers of</h2>
+        <div className='distributers-logos'>
+        <img src={img2} alt="Distributer 2" className="distributer-logo" />
+          <img src={img71}alt="Distributer 71" className="distributer-logo" />
+          <img src={img73} alt="Distributer 73" className="distributer-logo" />
+          <img src={img84} alt="Distributer 84" className="distributer-logo" />
+        </div>
         <h2>We Deal With</h2>
         <div className="image-marquee">
           <ImageMarquee />
