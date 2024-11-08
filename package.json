@@ -2,7 +2,11 @@
   "name": "rsraviations",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "https://rsraviationservices.github.io/RSRAviation",
+=======
+  "homepage": "https://rsraviationservices.github.io/RSRAviation/",
+>>>>>>> refs/remotes/origin/main
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
