@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+
 .kodchasan-regular {
   font-family: "Kodchasan", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 .nav-bar {
-  background-color: rgb(215,31,37);
+  background-color: rgb(215, 31, 37);
   padding: 10px 20px;
   display: flex;
-  justify-content: center; /* Center items horizontally */
+  justify-content: center;
 }
 
 .nav-list {
@@ -16,40 +18,84 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: center; /* Center items vertically */
+  align-items: center;
 }
 
 .nav-item {
   margin-right: 2vw;
-  
 }
 
 .nav-item:last-child {
-  margin-right: 0; /* Remove margin for the last item */
+  margin-right: 0;
 }
 
 .nav-link {
   text-decoration: none;
-  color: rgb(255, 255, 255); 
-  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
   display: flex;
-  align-items: center; /* Center icon and text vertically */
+  align-items: center;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Default font and icon size for large screens */
+.nav-link {
+  font-size: 1.2rem;
+}
+
 .nav-icon {
-  margin-right: 8px; /* Spacing between the icon and text */
-  font-size: 1vw;
-  color: rgb(255, 255, 255); /* Icon color */
+  margin-right: 8px;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover .nav-icon {
- 
   transform: scale(1.2);
 }
 
 .nav-link:hover {
- 
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens (phones in landscape) */
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 8px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .nav-icon {
+    font-size: 1rem;
+  }
+
+  /* Hide text on small screens */
+  .nav-link span {
+    display: none;
+  }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 5px;
+  }
+
+  .nav-icon {
+    font-size: 0.9rem;
+  }
 }

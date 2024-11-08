@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import img71 from '../../Resource/oems/71.jpg';
+import './Products.css';
 
 // Sample data for products
 const products = [
@@ -54,6 +55,7 @@ const products = [
   // Add the remaining products in this format...
 ];
 
+
 const Product = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [cart, setCart] = useState([]);
@@ -65,6 +67,7 @@ const Product = () => {
     product.specification.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.company.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
@@ -76,61 +79,21 @@ const Product = () => {
         placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{
-          width: "100%",
-          padding: "10px",
-          marginBottom: "20px",
-          fontSize: "16px",
-          border: "1px solid #ddd",
-          borderRadius: "4px"
-        }}
+        className="search-input"
       />
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+      <div className="product-grid">
         {filteredProducts.map((product, index) => (
-          <div
-            key={index}
-            style={{
-              border: "1px solid #ddd",
-              alignItems:"center",
-              borderRadius: "8px",
-              padding: "16px",
-              width: "calc(33.333% - 20px)",
-              boxSizing: "border-box",
-              textAlign: "center"
-            }}
-          >
-            <h2 style={{ fontSize: "18px", margin: "0 0 8px", display: "flex", justifyContent: "center", }}>
-              {product.product}
-            </h2>
-            <img
-              src={img71}
-              alt="Distributor 71"
-              className="distributer-logo"
-              style={{ width: "200px", height: "200px", objectFit: "contain", marginBottom: "10px", }}
-            />
-           
-            <p><strong>Product Name</strong>  SANDSTROM { product.productName}</p>
-            <p><strong>OEM:</strong> SANDSTROM  </p>
+          <div key={index} className="product-card">
+            <h2 className="product-title">{product.productName}</h2>
+            <img src={img71} alt="Distributor 71" className="distributor-logo" />
+            <p><strong>Product Name:</strong> SANDSTROM {product.productName}</p>
+            <p><strong>OEM:</strong> SANDSTROM</p>
             <p><strong>Part Number:</strong> {product.partNumber}</p>
             <p><strong>Specification:</strong> {product.specification}</p>
             <p><strong>Company:</strong> {product.company}</p>
-           
-
-            <button
-              onClick={() => addToCart(product)}
-              style={{
-                marginTop: "10px",
-                padding: "10px 15px",
-                backgroundColor: "rgb(215,31,37)",
-                color: "#fff",
-                border: "none",
-                borderRadius: "4px",
-                cursor: "pointer"
-              }}
-            >
-               Add to Cart
+            <button onClick={() => addToCart(product)} className="add-to-cart-btn">
+              Add to Cart
             </button>
-            
           </div>
         ))}
       </div>
