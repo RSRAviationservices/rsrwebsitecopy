@@ -9,21 +9,19 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="social-links">
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <a href="https://www.instagram.com/rsr_aviation/profilecard/?igsh=MWFsNHB1bjB4ZnQ2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <a href="https://x.com/RSR_aviation" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" aria-label="Google">
             <FontAwesomeIcon icon={faGoogle} />
           </a>
-          <a href="https://www.yourwebsite.com" target="_blank" rel="noopener noreferrer" aria-label="Website">
-            <FontAwesomeIcon icon={faGlobe} />
-          </a>
+       
         </div>
         <div className="footer-copyright">
           &copy; 2024 RSR Aviation Services Private Limited. All Rights Reserved.

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Customer-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: rgb(215, 31, 37);
+  text-align: center;
+}
+
+.ContactUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.form-info {
+  border: 1px solid rgb(215, 31, 37);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+  border-color: rgb(215, 31, 37);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.map-container {
+  border: 1px solid rgb(215, 31, 37);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .map-container, .form-info {
+    max-width: 100%;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 576px) {
+  .Customer-title {
+    font-size: 2rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  form input, form select, form textarea {
+    font-size: 0.9rem;
+  }
+}

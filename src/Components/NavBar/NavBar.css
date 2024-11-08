@@ -1,25 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
-
 .kodchasan-regular {
   font-family: "Kodchasan", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
-/* Sticky navbar */
 .nav-bar {
-  position: sticky;    /* Keep the navbar fixed at the top after scrolling */
-  top: 0;              /* Ensure it's at the top after header */
-  z-index: 999;        /* Lower z-index than the Header */
   background-color: rgb(215,31,37);
-  padding: 10px 0;
+  padding: 10px 20px;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+  justify-content: center; /* Center items horizontally */
 }
 
-/* Navigation list */
 .nav-list {
   display: flex;
   list-style: none;
@@ -28,16 +19,15 @@
   align-items: center; /* Center items vertically */
 }
 
-/* Navigation items */
 .nav-item {
   margin-right: 2vw;
+  
 }
 
 .nav-item:last-child {
   margin-right: 0; /* Remove margin for the last item */
 }
 
-/* Navigation links */
 .nav-link {
   text-decoration: none;
   color: rgb(255, 255, 255); 
@@ -54,45 +44,12 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect on link and icon */
 .nav-link:hover .nav-icon {
-  transform: scale(1.2); /* Enlarge icon on hover */
+ 
+  transform: scale(1.2);
 }
 
 .nav-link:hover {
-  transform: scale(1.2); /* Enlarge link on hover */
-}
-
-/* Responsive adjustments for medium and small screens */
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 1rem; /* Reduce font size on smaller screens */
-  }
-
-  .nav-icon {
-    font-size: 1.5rem; /* Adjust icon size for better readability */
-  }
-}
-
-@media (max-width: 576px) {
-  .nav-link {
-    font-size: 0.9rem; /* Further reduce font size for mobile screens */
-  }
-
-  .nav-icon {
-    font-size: 1.2rem; /* Adjust icon size for small screens */
-  }
-
-  .nav-item {
-    margin-right: 5px; /* Reduce spacing between nav items */
-  }
-}
-
-/* Hide NavBar on very small screens and show hamburger menu */
-@media (max-width: 400px) {
-  .nav-list {
-    display: none; /* Hide the nav list on small screens */
-  }
-
-  /* You can implement a hamburger menu here if needed */
+ 
+  transform: scale(1.2);
 }

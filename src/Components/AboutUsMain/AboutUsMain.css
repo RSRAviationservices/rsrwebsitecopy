@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Customer-title {
+    font-size: 2.5rem;
+    align-content: center;
+    margin-bottom: 2rem;
+    color: rgb(215, 31, 37);
+  }
+
+  .AboutUsMain {
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .section-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }

@@ -11,7 +11,6 @@ const Form = () => {
     phoneNumber: '',
     postalCode: '',
     country: '',
-    state: '',
     message: '',
   });
 
@@ -30,6 +29,7 @@ const Form = () => {
 
   return (
     <form className="form-container" onSubmit={handleSubmit}>
+      <h2></h2>
       <div className="form-group row">
         <div className="form-item">
           <label>First Name:</label>
@@ -115,16 +115,6 @@ const Form = () => {
               </option>
             ))}
           </select>
-        </div>
-        <div className="form-item">
-        <label>State:</label>
-          <input
-            type="text"
-            name="State"
-            value={formData.state}
-            onChange={handleChange}
-            required
-          />
         </div>
       </div>
 

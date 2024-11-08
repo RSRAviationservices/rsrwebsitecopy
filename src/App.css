@@ -1,151 +1,68 @@
 /* Smooth scrolling for the entire document */
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
 
-/* Basic body styling */
-body {
-  font-family: 'Arial', sans-serif;
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
   margin: 0;
   padding: 0;
-  padding-top: 120px; /* Combined height of header + navbar */
-}
-
-/* Section styling */
-.section {
-  min-height: 100vh; /* Each section takes full viewport height */
-  padding: 50px;
   box-sizing: border-box;
 }
-
-/* Global container styling for content layout */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Ensure video is responsive */
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Fixed Header and Navbar wrapper */
-.header-nav-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-/* Header styling */
-.header-nav-wrapper > *:first-child {
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Navbar styling */
-.header-nav-wrapper > *:nth-child(2) {
-  background-color: rgb(215, 31, 37);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-/* Navbar content styling */
-.header-nav-wrapper > *:nth-child(2) ul {
-  list-style-type: none;
+html, body {
+  margin: 0 !important;
   padding: 0;
-  margin: 0;
+ /* height: 100%; /* Ensure body takes up full height of the viewport */ 
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-}
-
-.header-nav-wrapper > *:nth-child(2) li {
-  margin: 0 10px;
-}
-
-.header-nav-wrapper > *:nth-child(2) a {
+  font-size: calc(10px + 2vmin);
   color: white;
-  text-decoration: none;
-  font-size: 16px;
+}
+.App-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  /* padding: 1rem; */
+  text-align: center; /* Center text horizontally */
+  position: relative; /* Ensure proper alignment */
+  width: 100%;
+  bottom: 0;
+}
+.App-link {
+  color: #61dafb;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  body {
-    padding-top: 110px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  .header-nav-wrapper > *:first-child {
-    height: 60px;
-  }
-
-  .header-nav-wrapper > *:nth-child(2) {
-    height: 50px;
-    padding: 5px 0;
-  }
-
-  .section {
-    padding: 30px 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    padding-top: 100px;
-  }
-
-  .header-nav-wrapper > *:first-child {
-    height: 50px;
-  }
-
-  .header-nav-wrapper > *:nth-child(2) {
-    height: 50px;
-    padding: 5px 0;
-  }
-
-  .header-nav-wrapper > *:nth-child(2) a {
-    font-size: 14px;
-  }
-
-  .section {
-    padding: 20px 15px;
-  }
-}
-
-@media (max-width: 400px) {
-  body {
-    padding-top: 90px;
-  }
-
-  .header-nav-wrapper > *:first-child {
-    height: 40px;
-    padding: 5px;
-  }
-
-  .header-nav-wrapper > *:nth-child(2) {
-    height: 50px;
-    padding: 5px 0;
-  }
-
-  .header-nav-wrapper > *:nth-child(2) a {
-    font-size: 12px;
-  }
-
-  .section {
-    padding: 15px 10px;
+  to {
+    transform: rotate(360deg);
   }
 }

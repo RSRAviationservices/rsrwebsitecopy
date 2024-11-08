@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Customer-title {
+    font-size: 2.5rem;
+    align-content: center;
+    margin-bottom: 2rem;
+    color: rgb(215, 31, 37);
+  }
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between certificates */
+    margin: 20px 0;
+    width: 100%; /* Ensure it adapts to screen width */
+  }
+  
+  .certificate {
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .certificate:hover {
+    transform: scale(1.2);
+    z-index: 1;
+    overflow: hidden;
+  }
+ 
+.Customers {
+  padding: 20px;
+  text-align: center;
+}
+
+.Customer-title {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+ .customers-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.customer-logo:hover {
+  transform: scale(1.5);
+}
+ .customer-logo {
+  width: 100px;
+  height: auto;
+}
