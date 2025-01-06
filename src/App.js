@@ -13,6 +13,7 @@ import ContactUs from './Components/ContactUs/ContactUs'
 import './App.css';
 import AboutUsMain from './Components/AboutUsMain/AboutUsMain';
 import Customers from './Components/Customers/Customers';
+import posterImage from "./Resource/poster.svg";
 
 const App = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
