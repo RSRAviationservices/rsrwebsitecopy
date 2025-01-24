@@ -7,6 +7,9 @@ import presentationVideo from '../../Resource/videos/About.mp4';
 import Form from '../Form/Form';
 import AboutUs from'../AboutUs/AboutUs';
 import img2 from '../../Resource/oems/2.jpg';
+import img1 from "../../Resource/oems/1.jpg";
+import img5 from "../../Resource/oems/5.jpg";
+import img7 from "../../Resource/oems/7.jpg";
 import img71 from '../../Resource/oems/71.jpg';
 import img73 from '../../Resource/oems/73.jpg';
 import img84 from '../../Resource/oems/84.jpg';
@@ -38,6 +41,15 @@ const Home = () => {
           <img src={img71}alt="Distributer 71" className="distributer-logo" />
           <img src={img73} alt="Distributer 73" className="distributer-logo" />
           <img src={img84} alt="Distributer 84" className="distributer-logo" />
+        </div>
+        <div>
+            <h2>Major Stock Holdings </h2>
+            <div className="distributers-logos"></div>
+            <img src={img2} alt="akzo" className="distributer-logo" />
+            <img src={img1} alt="3m" className="distributer-logo" />
+            <img src={img5} alt="ppg" className="distributer-logo" />
+            <img src={img7} alt="henkel" className="distributer-logo" />
+          </div>
         </div>
         <h2>We Deal With</h2>
         <div className="image-marquee">
