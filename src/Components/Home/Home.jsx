@@ -35,7 +35,6 @@ const Home = () => {
       <div className="who-we-are kodchasan-regular">
         <h2>Official Distributers of</h2>
         <div className='distributers-logos'>
-        <img src={img2} alt="Distributer 2" className="distributer-logo" />
           <img src={img71}alt="Distributer 71" className="distributer-logo" />
           <img src={img73} alt="Distributer 73" className="distributer-logo" />
           <img src={img84} alt="Distributer 84" className="distributer-logo" />
