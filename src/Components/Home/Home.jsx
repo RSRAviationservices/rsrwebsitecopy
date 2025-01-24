@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import './Home.css';
-import ImageMarquee from '../Imagemarquee/Imagemarquee';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
-import presentationVideo from '../../Resource/videos/About.mp4';
-import Form from '../Form/Form';
-import AboutUs from'../AboutUs/AboutUs';
-import img2 from '../../Resource/oems/2.jpg';
+import React, { useState } from "react";
+import "./Home.css";
+import ImageMarquee from "../Imagemarquee/Imagemarquee";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import presentationVideo from "../../Resource/videos/About.mp4";
+import Form from "../Form/Form";
+import AboutUs from "../AboutUs/AboutUs";
+import img2 from "../../Resource/oems/2.jpg";
 import img1 from "../../Resource/oems/1.jpg";
 import img5 from "../../Resource/oems/5.jpg";
 import img7 from "../../Resource/oems/7.jpg";
-import img71 from '../../Resource/oems/71.jpg';
-import img73 from '../../Resource/oems/73.jpg';
-import img84 from '../../Resource/oems/84.jpg';
-
+import img71 from "../../Resource/oems/71.jpg";
+import img73 from "../../Resource/oems/73.jpg";
+import img84 from "../../Resource/oems/84.jpg";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,24 +24,44 @@ const Home = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  
+
   return (
     <div className="home-container">
-      <div className='welcome'>
-        <video width="100%" height="auto" autoPlay loop controls controlsList="nodownload noremoteplayback nofullscreen">
+      <div className="welcome">
+        <video
+          width="100%"
+          height="auto"
+          autoPlay
+          loop
+          controls
+          controlsList="nodownload noremoteplayback nofullscreen"
+        >
           <source src={presentationVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div className="who-we-are kodchasan-regular">
-        <h2>Official Distributers of</h2>
-        <div className='distributers-logos'>
-          <img src={img71}alt="Distributer 71" className="distributer-logo" />
-          <img src={img73} alt="Distributer 73" className="distributer-logo" />
-          <img src={img84} alt="Distributer 84" className="distributer-logo" />
-        </div>
         <div>
+          <h2>Official Distributers </h2>
+          <div className="distributers-logos">
+            <img
+              src={img84}
+              alt="Distributer 84"
+              className="distributer-logo"
+            />
+            <img
+              src={img71}
+              alt="Distributer 71"
+              className="distributer-logo"
+            />
+            <img
+              src={img73}
+              alt="Distributer 73"
+              className="distributer-logo"
+            />
+          </div>
+          <div>
             <h2>Major Stock Holdings </h2>
             <div className="distributers-logos"></div>
             <img src={img2} alt="akzo" className="distributer-logo" />
@@ -60,7 +79,7 @@ const Home = () => {
       {/* Adding AboutUs Component Here */}
       <AboutUs />
 
-      <div className="query-icon" onClick={openModal}>  
+      <div className="query-icon" onClick={openModal}>
         <FontAwesomeIcon icon={faQuestionCircle} size="2x" />
       </div>
 
