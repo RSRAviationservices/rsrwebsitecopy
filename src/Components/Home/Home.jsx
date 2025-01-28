@@ -41,49 +41,63 @@ const Home = () => {
         </video>
       </div>
 
-      <div className="who-we-are kodchasan-regular">
-        <div>
-          <h2>Official Distributers </h2>
-          <div className="distributers-logos">
-            <img
-              src={img84}
-              alt="Distributer 84"
-              className="distributer-logo"
-            />
-            <img
-              src={img71}
-              alt="Distributer 71"
-              className="distributer-logo"
-            />
-            <img
-              src={img73}
-              alt="Distributer 73"
-              className="distributer-logo"
-            />
+      <div className="our-stock kodchasan-regular">
+        <div className="stocks-container">
+          <div className="stock-section">
+            <h2>Official Distributers</h2>
+            <div className="distributers-logos">
+              <img
+                src={img84}
+                alt="Distributer 84"
+                className="distributer-logo"
+              />
+              <img
+                src={img71}
+                alt="Distributer 71"
+                className="distributer-logo"
+              />
+              <img
+                src={img73}
+                alt="Distributer 73"
+                className="distributer-logo"
+              />
+            </div>
           </div>
-          <div>
-            <h2>Major Stock Holdings </h2>
-            <div className="distributers-logos"></div>
-            <img src={img2} alt="akzo" className="distributer-logo" />
-            <img src={img1} alt="3m" className="distributer-logo" />
-            <img src={img5} alt="ppg" className="distributer-logo" />
-            <img src={img7} alt="henkel" className="distributer-logo" />
+          <div className="stock-section">
+            <h2>Blending Partner</h2>
+            <div className="distributers-logos">
+              <img
+                src={img84}
+                alt="Distributer 84"
+                className="distributer-logo"
+              />
+            </div>
+          </div>
+          <div className="stock-section">
+            <h2>Major Stock Holdings</h2>
+            <div className="distributers-logos">
+              <img src={img2} alt="akzo" className="distributer-logo" />
+              <img src={img1} alt="3m" className="distributer-logo" />
+              <img src={img5} alt="ppg" className="distributer-logo" />
+              <img src={img7} alt="henkel" className="distributer-logo" />
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="who-we-are kodchasan-regular">
         <h2>We Deal With</h2>
         <div className="image-marquee">
           <ImageMarquee />
         </div>
       </div>
 
-      {/* Adding AboutUs Component Here */}
       <AboutUs />
 
       <div className="query-icon" onClick={openModal}>
         <FontAwesomeIcon icon={faQuestionCircle} size="2x" />
       </div>
 
-      {/* Modal */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
