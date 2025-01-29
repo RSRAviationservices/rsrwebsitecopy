@@ -44,7 +44,7 @@ const Home = () => {
       <div className="our-stock kodchasan-regular">
         <div className="stocks-container">
           <div className="stock-section">
-            <h2>Official Distributers</h2>
+            <h2>Official Distributors</h2>
             <div className="distributers-logos">
               <img
                 src={img84}
