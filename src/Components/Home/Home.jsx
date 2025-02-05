@@ -13,6 +13,7 @@ import img7 from "../../Resource/oems/7.jpg";
 import img71 from "../../Resource/oems/71.jpg";
 import img73 from "../../Resource/oems/73.jpg";
 import img84 from "../../Resource/oems/84.jpg";
+import img78 from "../../Resource/oems/78.jpg";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,8 +48,8 @@ const Home = () => {
             <h2>Official Distributors</h2>
             <div className="distributers-logos">
               <img
-                src={img84}
-                alt="Distributer 84"
+                src={img78}
+                alt="Distributer 78"
                 className="distributer-logo"
               />
               <img
