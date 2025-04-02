@@ -18,7 +18,7 @@ const App = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   useEffect(() => {
-    setIsPopupVisible(true);
+    setIsPopupVisible(false);
   }, []);
 
   const closePopup = () => {
