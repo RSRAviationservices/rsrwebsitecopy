@@ -1,5 +1,5 @@
 .footer {
-  background-color:rgb(215, 31, 37);
+  background-color: rgb(215, 31, 37);
   border-top: 1px solid #ffffff;
   padding: 20px 0;
   text-align: center;
@@ -27,7 +27,7 @@
 }
 
 .social-links a:hover {
-  transform: scale(2.0); /* Slightly zoom in on hover */
+  transform: scale(2); /* Slightly zoom in on hover */
   z-index: 1; /* Hover color */
 }
 
@@ -36,34 +36,84 @@
   font-size: 14px;
   color: #ffffff;
 }
+.reach-us {
+  margin-bottom: 10px;
+  text-align: left;
+  color: #fff;
+}
+
+.offices-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  color: #fff;
+}
+
+.office-section {
+  flex: 1 1 45%;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.business-hours {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #000000; /* or any accent color you prefer */
+}
+
+.reach-us,
+.office-section,
+.business-hours {
+  color: white;
+}
+.office-section strong,
+.business-hours strong {
+  color: white;
+  font-size: 20px;
+}
+.office-section h3,
+.office-section p,
+.reach-us h2,
+.business-hours p,
+.business-hours h3 {
+  color: white;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
-      padding: 15px 0;
+    padding: 15px 0;
   }
 
   .social-links a {
-      margin: 8px;
-      font-size: 22px;
+    margin: 8px;
+    font-size: 22px;
   }
 
   .footer-copyright {
-      font-size: 13px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 576px) {
   .footer-content {
-      padding: 10px;
+    padding: 10px;
   }
 
   .social-links a {
-      margin: 6px;
-      font-size: 20px;
+    margin: 6px;
+    font-size: 20px;
   }
 
   .footer-copyright {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
