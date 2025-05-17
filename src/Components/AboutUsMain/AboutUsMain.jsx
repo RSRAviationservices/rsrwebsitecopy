@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutUsMain.css';
 import img9100 from "../../Resource/certifications/9100.png";
 import img9120 from "../../Resource/certifications/ 9120.png";
-import img14001 from "../../Resource/certifications/14001.png";
+import img14001 from "../../Resource/certifications/ 14001.png";
 import logo from "../../Resource/logo.png";
 import special from "../../Resource/image-5-1.png";
 import Form from "../Form/Form";
