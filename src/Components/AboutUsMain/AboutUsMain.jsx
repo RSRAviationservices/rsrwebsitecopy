@@ -1,8 +1,8 @@
 import React from 'react';
 import './AboutUsMain.css';
-import img1900 from "../../Resource/certifications/1900.png";
-import img1920 from "../../Resource/certifications/1920.png";
-import startup from "../../Resource/certifications/Startup.png";
+import img1900 from "../../Resource/certifications/9100.png";
+import img1920 from "../../Resource/certifications/9120.png";
+import startup from "../../Resource/certifications/14001.png";
 import logo from "../../Resource/logo.png";
 import special from "../../Resource/image-5-1.png";
 import Form from "../Form/Form";
