@@ -1,8 +1,8 @@
 import React from 'react';
 import './AboutUsMain.css';
-import img1900 from "../../Resource/certifications/9100.png";
-import img1920 from "../../Resource/certifications/9120.png";
-import startup from "../../Resource/certifications/14001.png";
+import img9100 from "../../Resource/certifications/9100.png";
+import img9120 from "../../Resource/certifications/9120.png";
+import img14001 from "../../Resource/certifications/14001.png";
 import logo from "../../Resource/logo.png";
 import special from "../../Resource/image-5-1.png";
 import Form from "../Form/Form";
@@ -61,9 +61,9 @@ const AboutUsMain = () => {
     <div className='AboutUsMain'>
         <h1 className="Customer-title kodchasan-regular">Certifications</h1>
       <div className='certificates'>
-        <img src={img1900} alt="1900 certificates" className="certificate" />
-        <img src={img1920} alt="1920 certificates" className="certificate" />
-        <img src={startup} alt="Startup certificates" className="certificate" />
+        <img src={img9100} alt="1900 certificates" className="certificate" />
+        <img src={img9120} alt="1920 certificates" className="certificate" />
+        <img src={img14001} alt="14001 certificates" className="certificate" />
       </div>
       <div className="card-container">
         {sections.map((section, index) => (
