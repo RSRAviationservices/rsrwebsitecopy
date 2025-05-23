@@ -11,7 +11,10 @@
   align-items: center;
   justify-content: center;
 }
-
+.social-links a svg {
+  color: #ffffff !important;
+  fill: #ffffff !important; /* For SVG fill */
+}
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -35,56 +38,6 @@
   margin-top: 15px;
   font-size: 14px;
   color: #ffffff;
-}
-.reach-us {
-  margin-bottom: 10px;
-  text-align: left;
-  color: #fff;
-}
-
-.offices-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  color: #fff;
-}
-
-.office-section {
-  flex: 1 1 45%;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.business-hours {
-  margin-top: 20px;
-}
-
-.footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-.footer a:hover {
-  color: #000000; /* or any accent color you prefer */
-}
-
-.reach-us,
-.office-section,
-.business-hours {
-  color: white;
-}
-.office-section strong,
-.business-hours strong {
-  color: white;
-  font-size: 20px;
-}
-.office-section h3,
-.office-section p,
-.reach-us h2,
-.business-hours p,
-.business-hours h3 {
-  color: white;
 }
 
 /* Responsive Design */
