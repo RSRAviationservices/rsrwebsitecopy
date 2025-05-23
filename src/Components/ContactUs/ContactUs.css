@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap");
 
 .kodchasan-regular {
   font-family: "Kodchasan", sans-serif;
@@ -53,7 +53,9 @@ form label {
   margin-bottom: 5px;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -63,7 +65,9 @@ form input, form select, form textarea {
   transition: border-color 0.3s ease;
 }
 
-form input:focus, form select:focus, form textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
   border-color: rgb(215, 31, 37);
   outline: none;
 }
@@ -87,10 +91,64 @@ form textarea {
   height: 450px;
   border: none;
 }
+.reach-us {
+  margin-bottom: 10px;
+  text-align: left;
+  color: rgb(215, 31, 37);
+  flex-basis: 100%;
+  max-width: 100%;
+  margin-top: 1.5rem;
+}
+
+.offices-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(215, 31, 37);
+}
+
+.office-section {
+  flex: 1 1 45%;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.business-hours {
+  margin-top: 20px;
+}
+
+.footer a {
+  color: rgb(215, 31, 37);
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #000000; /* or any accent color you prefer */
+}
+
+.reach-us,
+.office-section,
+.business-hours {
+  color: rgb(215, 31, 37);
+}
+.office-section strong,
+.business-hours strong {
+  color: rgb(215, 31, 37);
+  font-size: 20px;
+}
+.office-section h3,
+.office-section p,
+.reach-us h2,
+.business-hours p,
+.business-hours h3 {
+  color: rgb(215, 31, 37);
+}
 
 /* Responsive for tablets */
 @media (max-width: 768px) {
-  .map-container, .form-info {
+  .map-container,
+  .form-info {
     max-width: 100%;
   }
 }
@@ -105,7 +163,9 @@ form textarea {
     height: 300px;
   }
 
-  form input, form select, form textarea {
+  form input,
+  form select,
+  form textarea {
     font-size: 0.9rem;
   }
 }
