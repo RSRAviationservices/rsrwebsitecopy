@@ -1,35 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import './Form.css'; // Import your CSS for styling
-import { countries } from 'countries-list'; // Import countries and states
+import React, { useState } from "react";
+import "./Form.css";
+import { countries } from "countries-list";
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    companyName: '',
-    email: '',
-    phoneNumber: '',
-    postalCode: '',
-    country: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    email: "",
+    phoneNumber: "",
+    postalCode: "",
+    country: "",
+    message: "",
   });
-
-  const [stateOptions, setStateOptions] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission, e.g., send data to the server
-    console.log(formData);
-  };
+  // Removed handleSubmit to allow normal form submission
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
+    <form
+      className="form-container"
+      action="https://formsubmit.co/info@rsraviation.com"
+      method="POST"
+    >
+      {/* Formsubmit hidden inputs */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input
+        type="hidden"
+        name="_next"
+        value="https://www.rsraviation.com/contactUs"
+      />
+
       <h2></h2>
+
       <div className="form-group row">
         <div className="form-item">
           <label>First Name:</label>
@@ -127,7 +134,9 @@ const Form = () => {
         />
       </div>
 
-      <button className='Submit' type="submit">Submit</button>
+      <button className="Submit" type="submit">
+        Submit
+      </button>
     </form>
   );
 };
