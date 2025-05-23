@@ -24,7 +24,7 @@ const Form = () => {
   return (
     <form
       className="form-container"
-      action="https://formsubmit.co/info@rsraviation.com"
+      action="https://formsubmit.co/603ab996e55d2c7460d14d4bc5fbd0ce"
       method="POST"
     >
       {/* Formsubmit hidden inputs */}
