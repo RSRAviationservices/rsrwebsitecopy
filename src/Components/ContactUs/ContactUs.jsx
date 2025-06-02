@@ -29,9 +29,7 @@ const ContactUs = () => {
                   -68-71,PLATINUM SPRING ,PLOT NO 6 G20 to G24 TALOJA,
                   PANVEL, MAHARASHTRA -410208
                 </p>
-                <p>
-                  <strong> Contact Person:</strong> SURESH RANHAGDALE{" "}
-                </p>
+                
                 <p>
                   <strong> For Corporate and Business-related Queries:</strong>{" "}
                   +91 74001 82337 / 022 4455 5321
