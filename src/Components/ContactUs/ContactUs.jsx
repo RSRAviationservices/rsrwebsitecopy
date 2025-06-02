@@ -34,7 +34,7 @@ const ContactUs = () => {
                 </p>
                 <p>
                   <strong> For Corporate and Business-related Queries:</strong>{" "}
-                  +91 9595475981
+                  +91 74001 82337 / 022 4455 5321
                 </p>
 
                 <p>
