@@ -30,6 +30,37 @@
   border-width: 0.5vw;
   overflow: hidden;
 }
+.image-carousel {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50px;
+  border: 0.5vw solid rgb(215, 31, 37);
+  overflow: hidden;
+}
+
+/* Image inside the carousel */
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50px;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out; /* Add transition to opacity */
+  opacity: 1; /* Set default opacity to fully visible */
+}
+/* Transition class for fade-out */
+.fade-out {
+  opacity: 0;
+}
+
+/* Transition class for fade-in */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Match this duration with the JavaScript timeout */
+}
 
 .stocks-container {
   display: flex;
