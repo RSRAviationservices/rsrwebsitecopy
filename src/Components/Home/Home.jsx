@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import ImageMarquee from "../Imagemarquee/Imagemarquee";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,7 +16,16 @@ import img84 from "../../Resource/oems/84.jpg";
 import img78 from "../../Resource/oems/78.jpg";
 
 const Home = () => {
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+
+  const images = importAll(
+    require.context("../../Resource/post", false, /\.(png|jpe?g|svg)$/)
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isImageChanging, setIsImageChanging] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -25,27 +34,38 @@ const Home = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsImageChanging(true); // Start image transition
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+        setIsImageChanging(false); // End image transition
+      }, 500); // Match this duration with CSS transition time
+    }, 5000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
 
   return (
     <div className="home-container">
       <div className="welcome">
-        <video
-          width="100%"
-          height="auto"
-          autoPlay
-          loop
-          controls
-          controlsList="nodownload noremoteplayback nofullscreen"
-        >
-          <source src={presentationVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="image-carousel">
+          <img
+            src={images[currentImageIndex]}
+            alt={`Carousel Slide ${currentImageIndex + 1}`}
+            className={`carousel-image ${
+              isImageChanging ? "fade-out" : "fade-in"
+            }`}
+          />
+        </div>
       </div>
 
       <div className="our-stock kodchasan-regular">
         <div className="stocks-container">
           <div className="stock-section">
-            <h2>Official Distributors</h2>
+            <h2>Official Distributers</h2>
             <div className="distributers-logos">
               <img
                 src={img78}
