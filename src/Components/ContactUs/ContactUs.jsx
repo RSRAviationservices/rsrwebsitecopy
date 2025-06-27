@@ -27,7 +27,7 @@ const ContactUs = () => {
                 <p>
                   <strong> Address:</strong> RSR AVIATION PVT.LTD UNIT NO B
                   -68-71,PLATINUM SPRING ,PLOT NO 6 G20 to G24 TALOJA,
-                  PANVEL, MAHARASHTRA -410208
+                  PANVEL, NAVI MUMBAI, MAHARASHTRA -410208
                 </p>
                 
                 <p>
@@ -41,7 +41,7 @@ const ContactUs = () => {
                 </p>
                 <p>
                   <strong> Email:</strong>{" "}
-                  <a href="mailto:info@rsraviation.com">INFO@RSRAVIATION.COM</a>
+                  <a href="mailto:info@rsraviation.com">SALES@RSRAVIATION.COM</a>
                 </p>
               </div>
             </div>
