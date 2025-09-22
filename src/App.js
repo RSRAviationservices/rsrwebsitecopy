@@ -4,7 +4,6 @@ import Header from "./Components/Header/Header";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import Team from "./Components/Team/Team";
-import Products from "./Components/Products/Products";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/login/login";
 import Cart from "./Components/Cart/Cart";
@@ -13,6 +12,8 @@ import "./App.css";
 import AboutUsMain from "./Components/AboutUsMain/AboutUsMain";
 import Customers from "./Components/Customers/Customers";
 import posterImage from "./Resource/poster.svg";
+import Services from "./Components/Services/Services";
+import MediaCareer from "./Components/MediaCareer/MediaCareer";
 
 const App = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -49,8 +50,9 @@ const App = () => {
         <Route path="/aboutUs" element={<AboutUsMain />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<MediaCareer />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/Services" element={<Services />} />
       </Routes>
       <Footer />
     </>

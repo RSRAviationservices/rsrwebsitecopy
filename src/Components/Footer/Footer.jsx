@@ -23,6 +23,13 @@ const Footer = () => {
           </a>
        
         </div>
+        <div className="footer-newsletter">
+          <form action="https://formsubmit.co/marketing@rsraviation.com" method="POST" className="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email" required className="newsletter-input" />
+            <input type="hidden" name="_captcha" value="false" />
+            <button type="submit" className="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
         <div className="footer-copyright">
           &copy; 2025 RSR Aviation Services Private Limited. All Rights Reserved.
         </div>

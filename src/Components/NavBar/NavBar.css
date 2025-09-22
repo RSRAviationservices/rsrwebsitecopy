@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap');
-
-.kodchasan-regular {
-  font-family: "Kodchasan", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .nav-bar {
   background-color: rgb(215, 31, 37);
   padding: 10px 20px;
   display: flex;
   justify-content: center;
+  font-family: "Georgia,Times";
 }
 
 .nav-list {
@@ -19,6 +13,7 @@
   padding: 0;
   margin: 0;
   align-items: center;
+  font-family: "Georgia,Times";
 }
 
 .nav-item {

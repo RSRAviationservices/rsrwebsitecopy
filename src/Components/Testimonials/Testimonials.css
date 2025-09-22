@@ -1,0 +1,168 @@
+.testimonials-carousel-bg {
+ 
+  padding: 60px 0 40px 0;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.testimonials-carousel-bg {
+    text-align: center;
+    font-family: "Georgia,Times";
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(215, 31, 37);
+}
+.testimonials-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-title{
+    font-family: "Georgia,Times";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.carousel-text{
+    font-family: "Georgia,Times";
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+.carousel-arrow {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2.2rem;
+  color:rgb(215, 31, 37);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  background: rgb(215, 31, 37);
+  color: #fff;
+}
+.carousel-arrow.left {
+  margin-right: 18px;
+}
+.carousel-arrow.right {
+  margin-left: 18px;
+}
+.carousel-cards {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+  /* Add smooth transition for sliding */
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
+}
+.carousel-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 36px 28px 28px 28px;
+  max-width: 340px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.carousel-card:hover {
+  box-shadow: 0 8px 32px #444;
+}
+.carousel-img-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -70px;
+  margin-bottom: 1rem;
+  border: 5px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #eee;
+}
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #222;
+}
+.carousel-title {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+.carousel-stars {
+  margin-bottom: 1rem;
+}
+.carousel-text {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  gap: 10px;
+}
+.carousel-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+  border: 2px solid rgb(215, 31, 37);
+}
+.carousel-dot.active {
+  opacity: 1;
+  background:rgb(215, 31, 37);
+  border-color: rgb(215, 31, 37);
+}
+@media (max-width: 1100px) {
+  .carousel-cards {
+    gap: 18px;
+  }
+  .carousel-card {
+    max-width: 280px;
+    padding: 28px 12px 20px 12px;
+  }
+}
+@media (max-width: 900px) {
+  .carousel-cards {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .carousel-card {
+    max-width: 90vw;
+    min-width: 0;
+  }
+  .testimonials-carousel {
+    flex-direction: column;
+  }
+  .carousel-arrow.left, .carousel-arrow.right {
+    margin: 0 0 18px 0;
+  }
+}
+  

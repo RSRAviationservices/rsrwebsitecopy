@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@400&display=swap");
-
-.kodchasan-regular {
-  font-family: "Kodchasan", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .home-container {
   width: 100%;
@@ -12,6 +5,104 @@
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  
+}
+.home-container h2{
+  font-family: "Georgia,Times";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.target-market-container {
+ font-family: "Georgia,Times";
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: bold;
+}
+.target-market {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+  margin: 24px 0;
+}
+.target-market-button {
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  border: 2px solid rgb(215, 31, 37);
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Fill the button with the image */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.target-market-button span {
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.target-market-button::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.target-market-button:hover span {
+  opacity: 1;
+}
+.target-market-button:hover::after {
+  opacity: 1;
+}
+
+.target-market-button:nth-child(1) {
+  background-image: url('../../Resource/Defence.png');
+}
+.target-market-button:nth-child(2) {
+  background-image: url('../../Resource/Aerospace.png');
+}
+.target-market-button:nth-child(3) {
+  background-image: url('../../Resource/industrial.png');
+}
+.target-market-button:nth-child(4) {
+  background-image: url('../../Resource/general Aviation.png');
+}
+
+.target-market-button:hover {
+  
+  color: white;
+}
+.product-categories {
+  text-align: center;
+  font-family: "Georgia,Times";
+  font-weight: 400;
+  font-style: normal;
 }
 
 .welcome {
@@ -180,6 +271,21 @@
 }
 
 @media (max-width: 576px) {
+  .target-market {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .target-market-button {
+    height: 60px;
+    background-size: cover; /* Fill the button with the image on mobile too */
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  .target-market-button span {
+    font-size: 1rem;
+  }
   .distributer-logo {
     width: 100px; /* Further reduce logo size for mobile devices */
   }
@@ -220,3 +326,4 @@ video::-moz-media-controls {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+

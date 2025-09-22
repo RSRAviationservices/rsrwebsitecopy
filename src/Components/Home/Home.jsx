@@ -14,6 +14,11 @@ import img71 from "../../Resource/oems/71.jpg";
 import img73 from "../../Resource/oems/73.jpg";
 import img84 from "../../Resource/oems/84.jpg";
 import img78 from "../../Resource/oems/78.jpg";
+import ProductCategories from "../ProductCateories/productCategories";
+import { Button } from "react-scroll";
+import Testimonials from "../Testimonials/Testimonials";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
   function importAll(r) {
@@ -26,6 +31,8 @@ const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isImageChanging, setIsImageChanging] = useState(false);
+  const [fadeOutIndustry, setFadeOutIndustry] = useState(false);
+  const navigate = useNavigate();
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -47,6 +54,14 @@ const Home = () => {
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [images.length]);
+
+  const handleIndustryClick = (idx) => {
+    setFadeOutIndustry(true);
+    setTimeout(() => {
+      navigate('/Services', { state: { industryIndex: idx } });
+      setFadeOutIndustry(false);
+    }, 400);
+  };
 
   return (
     <div className="home-container">
@@ -112,8 +127,21 @@ const Home = () => {
           <ImageMarquee />
         </div>
       </div>
+      <div className={`target-market-container${fadeOutIndustry ? ' fade-out' : ''}`}>
+        <h2>Industries We Serve</h2>
+      <div className="target-market">
+        <Button className="target-market-button" onClick={() => handleIndustryClick(0)}><span>Defence</span></Button>
+        <Button className="target-market-button" onClick={() => handleIndustryClick(1)}><span>Aerospace MRO</span></Button>
+        <Button className="target-market-button" onClick={() => handleIndustryClick(2)}><span>Industrial</span></Button>
+        <Button className="target-market-button" onClick={() => handleIndustryClick(3)}><span>General Aviation</span></Button>
+      </div>
+      </div>
+      <div className="product-categories">
+        <h2>Product Categories</h2>
+      <ProductCategories />
+      </div>
 
-      <AboutUs />
+      <Testimonials />
 
       <div className="query-icon" onClick={openModal}>
         <FontAwesomeIcon icon={faQuestionCircle} size="2x" />
@@ -129,6 +157,7 @@ const Home = () => {
           </div>
         </div>
       )}
+     
     </div>
   );
 };

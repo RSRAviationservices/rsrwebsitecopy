@@ -1,7 +1,7 @@
 // src/Components/NavBar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUsers, FaBoxOpen, FaHandshake, FaInfoCircle, FaUserFriends } from 'react-icons/fa'; // Importing Font Awesome icons
+import { FaHome, FaUsers, FaBoxOpen, FaHandshake, FaInfoCircle, FaUserFriends, FaNewspaper } from 'react-icons/fa'; // Importing Font Awesome icons
 import './NavBar.css'; // Import CSS for styling
 
 const NavBar = () => {
@@ -24,13 +24,13 @@ const NavBar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/customers" className="nav-link kodchasan-regular">
-            <FaUserFriends className="nav-icon" /> <span>Our Customers</span>
+          <Link to="/Services" className="nav-link kodchasan-regular">
+            <FaUserFriends className="nav-icon" /> <span>Services</span>
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/products" className="nav-link kodchasan-regular">
-            <FaBoxOpen className="nav-icon" /> <span>Products</span>
+            <FaNewspaper className="nav-icon" /> <span>Media & Career</span>
           </Link>
         </li>
         <li className="nav-item">
